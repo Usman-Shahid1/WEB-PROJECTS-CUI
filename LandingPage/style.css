@@ -12,6 +12,8 @@
     --border-radius: 32px;
 }
 
+
+
 body
 {
     background-color: var(--color-bg-1);
@@ -25,6 +27,7 @@ h1,h2,h3,h4,h5,h6
     color:var(--color-heading);
 
 }
+
 a{
     transition: all 0.4s ease;
     text-decoration: none;
@@ -39,5 +42,6 @@ img{
 section
 {
     padding-top: 120px;
-    padding-bottom: ;
+    padding-bottom: 120px;
 }
+
