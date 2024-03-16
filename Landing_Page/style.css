@@ -225,8 +225,61 @@ span{
 
 }
 
+/** Contact Form **/
 
+.container-contactus
+{
+    background:#0e5470 ;
+    font-size: 14px;
+}
 
-   
+.contactform
+{
+    width: 80%;
+    margin:50px auto;
+}
 
+.contact-box
+{
+    background: white;
+    display:flex;
+}
 
+.contact-left
+{
+    flex-basis: 60%;
+    padding:40px 60px;
+}
+
+.contact-right
+{
+    flex-basis: 40%;
+    padding:40px;
+    background: #febd68;
+    color:white;
+}
+
+.contactform h1
+{
+    margin-bottom: 10px;
+}
+
+.input-row
+{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group
+{
+    flex-basis: 45%;
+}
+input
+{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom:5px ;
+}
