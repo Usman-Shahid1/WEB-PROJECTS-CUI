@@ -352,3 +352,11 @@ label
   {
     padding-top: 20px;
   }
+
+  /** .error form class **/
+
+  .error{
+    color: red;
+    font-style:italic;
+    
+  }

@@ -153,30 +153,30 @@
         <div class="contact-box">
             <div class="contact-left">
                 <h3>Send Your Request</h3>
-                <form>
+                <form id="register" action="h.html" method="post">
                     <div class="input-row">
                         <div class="input-group">
                             <label>Name</label>
-                            <input type="text" placeholder="E.g:Usman Shahid">
+                            <input name="name" type="text" placeholder="E.g:Usman Shahid">
                         </div>
                         <div class="input-group">
                             <label>Phone</label>
-                            <input type="text" placeholder="E.g:+92 123 456 789">
+                            <input name="phonenumber" type="text" placeholder="E.g:+92 123 456 789">
                         </div>
                     </div>
 
                     <div class="input-row">
                         <div class="input-group">
                             <label>Email</label>
-                            <input type="email" placeholder="E.g:swiftcart@gmail.com">
+                            <input name="email" type="email" placeholder="E.g:swiftcart@gmail.com">
                         </div>
                         <div class="input-group">
                             <label>Subject</label>
-                            <input type="text" placeholder="E.g:Shipping Details">
+                            <input name="subject" type="text" placeholder="E.g:Shipping Details">
                         </div>
                     </div>
                     <label>Message</label>
-                    <textarea  rows="5" placeholder="Your Message"></textarea>
+                    <textarea name="usermsg"  rows="5" placeholder="Your Message"></textarea>
                     
                     <button type="submit" class="btn">SUBMIT</button>
                 
@@ -207,15 +207,16 @@
 
         </div>
 
+
     
       
     </div>
 
+    <!-- JQUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
 
-    
-
-
-
+<script src="form-validation.js"></script>
 
 
 </body>
