@@ -1,3 +1,5 @@
+//itsus5220,4linzRYHdtFoiOrg
+// mongodb+srv://itsus5220:4linzRYHdtFoiOrg@uni-ecom.6uow5ui.mongodb.net/?retryWrites=true&w=majority&appName=uni-ecom
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -7,10 +9,10 @@ const expressSession = require('express-session');
 const app = express();
 
 // Connect to MongoDB
- //mongoose.connect('mongodb://localhost:27017/ecommerce', {
-  //useNewUrlParser: true,
-  //useUnifiedTopology: true,
-//}); //
+ mongoose.connect("mongodb+srv://itsus5220:4linzRYHdtFoiOrg@uni-ecom.6uow5ui.mongodb.net/?retryWrites=true&w=majority&appName=uni-ecom", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}); 
 
 // Middleware
 app.use(express.json());
@@ -23,7 +25,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 // Routes
 app.use('/', require('./routes/index'));
