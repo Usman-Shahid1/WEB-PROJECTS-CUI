@@ -217,6 +217,18 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
 <script src="/js/form-validation.js"></script>
 
+ <!-- Product listing -->
+ <h2>Featured Products</h2>
+ <ul>
+   <% products.forEach(product => { %>
+     <li>
+       <h3><%= product.name %></h3>
+       <p>Price: $<%= product.price %></p>
+       <p><%= product.description %></p>
+       <img src="<%= product.image %>" alt="<%= product.name %>">
+     </li>
+   <% }) %>
+ </ul>
 
 
 </body>
