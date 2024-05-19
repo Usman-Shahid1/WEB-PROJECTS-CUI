@@ -6,6 +6,7 @@
 
 .navbar
 {
+  
     height: 60px;
     background-color: #0f1111;
     color:white;
@@ -21,7 +22,7 @@
 }
 .logo
 {
-    background-image: url(./images/logonew-removebg-preview.png);
+    background-image: url(/images/logonew-removebg-preview.png);
     background-size: cover;
     height:50px;
     width:100%
@@ -158,7 +159,7 @@ span{
 /** hero section **/
 .hero-section
 {
-    background-image: url(./images/hero_image.png);
+    background-image: url(/images/hero_image.png);
     background-size: cover;
     height:450px;
     display: flex;
@@ -442,13 +443,13 @@ label
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 .footer {
-  position: absolute;
-  top: 50%;
+  position:relative;
+  margin-top:15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 1280px;
-  width: 95%;
-  background: #10182F;
+  max-width: 1900px;
+  width: 98%;
+  background: #030818;
   border-radius: 6px;
 }
 .footer .footer-row {
