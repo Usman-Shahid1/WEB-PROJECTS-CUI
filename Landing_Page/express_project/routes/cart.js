@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Product = require('../models/Product');
+const Product = require('../models/myproduct');
 const checkAuth = require('../middlewares/check-auth'); // Assuming you have an authentication middleware
 
 router.get('/', checkAuth, async (req, res) => {

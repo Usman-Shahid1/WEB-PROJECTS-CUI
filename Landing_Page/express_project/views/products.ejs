@@ -1,38 +1,90 @@
-<html lang="en">
+<!-- <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Document</title>
+    <title>Viewing Products</title>
 </head>
+
 <body>
-  <h1>
-    USMAN SHAHID
-  </h1>
 
-  <h2>Products</h2>
-<ul>
-  <% products.forEach(product => { %>
-    <li>
-      <h3><%= product.name %></h3>
-      <p>Price: $<%= product.price %></p>
-      <p><%= product.description %></p>
-      <img src="<%= product.image %>" alt="<%= product.name %>">
-    </li>
-  <% }) %>nod
-</ul>
+    <!-- <div class="containerproducts">
+        <div class="card">
+            <div class="imgBx">
+                <img src="/images/nikeshoes.png" alt="nike-air-shoe">
+            </div>
 
-<% if (pagination.totalPages > 1) { %>
-  <nav>
-    <ul>
-      <% for (let i = 1; i <= pagination.totalPages; i++) { %>
-        <li>
-          <a href="/products?page=<%= i %>"><%= i %></a>
-        </li>
-      <% } %>
-    </ul>
-  </nav>
+            <div class="contentBx">
+
+                <h2>Nike Shoes</h2>
+
+                <div class="size">
+                    <h3>Size :</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+
+                <div class="color">
+
+                    <h3>Color :</h3>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 
-</html>
+</html> -->
+
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Products</title>
+      <style>
+          /* Add your CSS styles here */
+          .product {
+              border: 1px solid #ccc;
+              padding: 10px;
+              margin-bottom: 10px;
+          }
+
+          .product h2 {
+              margin-top: 0;
+          }
+
+          .product p {
+              margin: 5px 0;
+          }
+      </style>
+  </head>
+
+  <body>
+      <h1>Products</h1>
+      <div id="products-container">
+          
+              <div class="product">
+                  <p>Name: <%= products.name %></p>
+                  <p>Description: <%= products.description %></p>
+                  <p>Price: <%= products.price %></p>
+              </div>
+    
+      </div>
+
+      <script src="../public/js/scripts.js"></script> <!-- Include your client-side JavaScript file -->
+  </body>
+
+  </html>
+
