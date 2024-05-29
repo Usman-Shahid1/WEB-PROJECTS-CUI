@@ -46,45 +46,21 @@
 
 
 
-  <!DOCTYPE html>
-  <html lang="en">
+  <table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <% for (var i=0; i<myproducts.length;i++) { %>
+        <tr>
+            <td><%= myproducts[i].name %></td>
+            <td><%= myproducts[i].description %></td>
+            <td><%= myproducts[i].price %></td>
+        </tr>
 
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Products</title>
-      <style>
-          /* Add your CSS styles here */
-          .product {
-              border: 1px solid #ccc;
-              padding: 10px;
-              margin-bottom: 10px;
-          }
+   <% }  %>
+       
+   
 
-          .product h2 {
-              margin-top: 0;
-          }
-
-          .product p {
-              margin: 5px 0;
-          }
-      </style>
-  </head>
-
-  <body>
-      <h1>Products</h1>
-      <div id="products-container">
-          
-              <div class="product">
-                  <p>Name: <%= products.name %></p>
-                  <p>Description: <%= products.description %></p>
-                  <p>Price: <%= products.price %></p>
-              </div>
-    
-      </div>
-
-      <script src="../public/js/scripts.js"></script> <!-- Include your client-side JavaScript file -->
-  </body>
-
-  </html>
-
+  </table>

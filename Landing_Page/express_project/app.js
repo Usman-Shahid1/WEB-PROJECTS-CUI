@@ -1,5 +1,6 @@
 //itsus5220,4linzRYHdtFoiOrg
 // mongodb+srv://itsus5220:4linzRYHdtFoiOrg@uni-ecom.6uow5ui.mongodb.net/?retryWrites=true&w=majority&appName=uni-ecom
+
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
@@ -11,7 +12,7 @@ const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const productsRouter = require('./routes/products');
 const Product = require('./models/myproduct');
-
+const Router=require("./routes/products.js")
 // Connect to MongoDB
  mongoose.connect("mongodb+srv://itsus5220:4linzRYHdtFoiOrg@uni-ecom.6uow5ui.mongodb.net/?retryWrites=true&w=majority&appName=uni-ecom", {
   useNewUrlParser: true,
@@ -51,21 +52,31 @@ app.get('/contact', (req, res) => {
   res.render('contact', { title: 'Contact' });
 });
 
+// app.get('/products', (req, res) => {
+  
+//   res.render('products', { title: 'Products' });
+// });
 app.get('/products', (req, res) => {
+  Product.find().then((result=>{
+    res.send(result);
+  })).catch((err)=>{
+    console.log(err);
+  })
+ 
   
   res.render('products', { title: 'Products' });
+  console.log(Products);
 });
-
 app.get('/addProduct', (req, res) => {
   res.render('addProduct');
 });
 app.post('/api/addProduct', require('./routes/addProduct'));
 
-app.use('/products',productsRouter  );
+app.use('/api/products',productsRouter  );
 
 
 // Start the server
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

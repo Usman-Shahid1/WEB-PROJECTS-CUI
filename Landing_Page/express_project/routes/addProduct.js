@@ -59,7 +59,7 @@ router.post('/api/addProduct', async (req, res) => {
     await newProduct.save();
     res.status(201).send('Product added successfully');
   } catch (error) {
-    res.status(500).send('Error adding product');
+    res.status(500).send('Error');
   }
 });
 

@@ -74,11 +74,11 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/myproduct');
 
-// GET route to fetch products
-router.get('/api/products', async (req, res) => {
+//GET route to fetch products
+router.get('/products1', async (req, res) => {
     try {
-        const products = await Product.find({}); // Fetch products from the database
-        res.render('products',{products});
+        const products = await Product.find(); // Fetch products from the database
+      res.render('products',{products: products});
         // Send products as JSON response
     } catch (error) {
         console.error(error);

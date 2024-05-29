@@ -12,11 +12,12 @@ const productSchema = new mongoose.Schema({
   price: {
     type: Number,
     required: true,
-  },
+  }
   // image: {
   //   type: String,
   //   required: true,
   // }
 });
 
-module.exports = mongoose.model('myproduct', productSchema);
+const Product = mongoose.model('myproducts',productSchema);
+module.exports = Product;
