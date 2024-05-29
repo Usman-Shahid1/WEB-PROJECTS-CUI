@@ -1,0 +1,279 @@
+
+*
+{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.profile_container{
+    display: flex;
+    gap:2rem;
+}
+.profile_profile_image
+{
+    max-width: 250px;
+    
+}
+
+:root{
+--primary-color:#DFFF00;
+--text-color:#2697ee;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+font-family: Rokkitt, sans-serif;
+background-color: #0F0F0F;
+color: whitesmoke;
+
+}
+/* Common styles  */
+img{
+    width: 100%;
+    border-radius: 50%;
+    border-width: 10%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.description
+{
+    margin-top:1rem ;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color:whitesmoke;
+}
+.title
+{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.item_preTitle
+{
+    font-size: 1.4rem;
+    color:var(--primary-color);
+    font-weight: 300;
+}
+.item_title{
+    font-size: 1.6rem;
+    color:white;
+    font-weight:500;
+    margin: 0.8rem 0;
+}
+.item_subtitle
+{
+    font-size:1.4rem ;
+    color:antiquewhite;
+    font-weight: 400;
+
+}
+/*Layouts for the structure of this project */
+/* DFFF00 */
+.container{
+    max-width: 1000px;
+    width:90%;
+    margin:0 auto;
+    display: grid;
+    padding:5rem;
+    background: rgb(13, 14, 5);
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+/* Responsiveness */
+
+@media only screen and (max-width:768px)
+{
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem
+    }
+}
+.profile {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+}
+.group-1,.group-2
+{
+    display:flex;
+    flex-direction: column;
+    gap: 5rem;
+
+}
+.group-3
+{
+    max-width: 700px;
+    width:100% ;
+    margin:0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap:5rem
+}
+.group-3 > div{
+    flex:1;
+}
+
+@media only screen and (max-width:768px)
+{
+    .group-3{
+        flex-direction: column;
+    }
+}
+
+.
+/*Profile*/
+
+
+.profile_name_firstName
+{
+    color:white;
+    font-weight: 200;
+    font-size:clamp(2rem,8vw,4rem);
+    text-transform: uppercase;
+    margin-bottom:-0.8rm;
+}
+.profile_name_lastName
+{
+    color: var(--primary-color);
+    font-weight:700;
+    font-size: large;
+    text-transform: uppercase;
+}
+.profile_title
+{
+    margin-top: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration:solid;
+}
+.profile_title:hover
+{
+    color: red;
+}
+@media only screen and (max-width:768px)
+{
+    .profile_container{
+        flex-direction: column;
+    }
+}
+/* Skill Set*/
+.skill_list
+{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height:2 ;
+
+}
+/* Reference */
+.ref_item
+{
+    margin-top: 2rem;
+}
+.ref_name
+{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(189, 39, 39);
+}
+
+/*Education */
+.edu_item
+{
+    margin-top: 2rem;
+    
+}
+
+/*Certifications*/
+.certification_item{
+    margin-top: 2rem;
+}
+
+/*experince*/
+.exp_item
+{
+    margin-top: 2rem;
+}
+/*Internships*/
+
+.intern_items
+{
+    margin-top: 2rem;
+
+}
+
+/* Interests */
+
+.interest_items
+{
+    margin-top: 2rem;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.interest_item
+{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color:rgb(168, 64, 64);
+}
+.interest_item svg
+{
+    width: 2rem;
+}
+
+/*Social Accounts */
+
+.social_items
+{
+    margin-top: 2rem;
+}
+
+.social_item
+{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color:whitesmoke
+}
+
+.social_item:hover{
+    color:var(--primary-color);
+}
+.social_item svg
+{
+    width: 2rem;
+}
+
+hr
+{
+   grid-column: 1/-1; 
+   border-top:2px solid var(--primary-color);
+    
+}
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap')
+
